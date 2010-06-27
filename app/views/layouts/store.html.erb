@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Pragprog Bookds Online Store</title>
+  <%= stylesheet_link_tag 'depot', :media => "all" %>
+</head>
+<body id="sotre">
+  <div id="banner">
+    <%= image_tag("logo.png") %>
+    <%= @page_title || "Pragmatic Bookshelf" %>
+  </div>
+  <div id="columns">
+    <div id="side">
+      <a href="#">HOME</a><br/>
+      <a href="#">FAQ</a><br/>
+      <a href="#">NEWS</a><br/>
+      <a href="#">CONTACT</a><br/>
+    </div>
+    <div id="main">
+      <%= yield :layout %>
+    </div>
+  </div>
+</body>
+</html>
