@@ -6,6 +6,7 @@
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <title>Pragprog Bookds Online Store</title>
   <%= stylesheet_link_tag 'depot', :media => "all" %>
+  <%= javascript_include_tag :defaults %>
 </head>
 <body id="sotre">
   <div id="banner">
@@ -14,6 +15,10 @@
   </div>
   <div id="columns">
     <div id="side">
+      <% hidden_div_if(@cart.items.empty?, :id => "cart") do %>
+        <%= render(:partial => "cart", :object => @cart) %>
+      <% end %>
+      
       <a href="#">HOME</a><br/>
       <a href="#">FAQ</a><br/>
       <a href="#">NEWS</a><br/>
